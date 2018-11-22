@@ -13,11 +13,13 @@ class ApplicationController < Sinatra::Base
   end
 
   get '/artists' do
-
+    @artists = Artist.all
+    erb :"artists/index"
   end
 
   get '/genres' do
-
+    @genres = Genre.all
+    erb :"genres/index"
   end
 
 end
